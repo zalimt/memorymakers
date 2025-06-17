@@ -1,0 +1,264 @@
+$dark-bg: #181818;
+$gradient: linear-gradient(90deg, #a259d9 0%, #a3ffe6 100%);
+$purple: #a259d9;
+$mint: #a3ffe6;
+$white: #fff;
+
+// Gilroy font weights
+$gilroy-light: 300;
+$gilroy-regular: 400;
+$gilroy-bold: 700;
+$gilroy-extrablack: 900;
+
+.landing-page {
+  background: $dark-bg;
+  color: $white;
+  font-family: 'Gilroy', 'Montserrat', 'Arial', sans-serif;
+  font-weight: $gilroy-regular;
+  min-height: 100vh;
+  padding: 0;
+}
+
+section {
+  margin: 0 auto 48px auto;
+  padding: 48px 0 32px 0;
+  max-width: 1200px;
+  border-radius: 32px;
+  background: rgba(24, 24, 24, 0.95);
+  box-shadow: 0 4px 32px rgba(0,0,0,0.3);
+  position: relative;
+  font-family: 'Gilroy', 'Montserrat', 'Arial', sans-serif;
+  font-weight: $gilroy-regular;
+}
+
+h1 {
+  font-family: 'Gilroy', 'Montserrat', 'Arial', sans-serif;
+  font-weight: $gilroy-extrablack;
+}
+h2, h3 {
+  font-family: 'Gilroy', 'Montserrat', 'Arial', sans-serif;
+  font-weight: $gilroy-bold;
+}
+
+b, strong {
+  font-family: 'Gilroy', 'Montserrat', 'Arial', sans-serif;
+  font-weight: $gilroy-bold;
+}
+
+// For lighter text (if needed)
+.gilroy-light {
+  font-family: 'Gilroy', 'Montserrat', 'Arial', sans-serif;
+  font-weight: $gilroy-light;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  .hero-content {
+    flex: 1;
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.3rem;
+      color: $white;
+      font-weight: 400;
+    }
+  }
+  .hero-image-placeholder {
+    width: 300px;
+    height: 300px;
+    background: rgba(162, 89, 217, 0.1);
+    border: 2px dashed $mint;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $mint;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+}
+
+.brands {
+  .brands-list {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    .brand-card {
+      flex: 1 1 250px;
+      background: rgba(24,24,24,0.85);
+      border: 2px solid $purple;
+      border-radius: 24px;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .brand-logo-placeholder {
+        width: 80px;
+        height: 80px;
+        background: rgba(163,255,230,0.08);
+        border: 2px dashed $mint;
+        border-radius: 50%;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $mint;
+      }
+      h3 {
+        font-size: 1.4rem;
+      }
+      p {
+        color: $white;
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.founders {
+  .founders-list {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    .founder-card {
+      flex: 1 1 350px;
+      background: rgba(24,24,24,0.85);
+      border: 2px solid $mint;
+      border-radius: 24px;
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .founder-photo-placeholder {
+        width: 100px;
+        height: 100px;
+        background: rgba(162,89,217,0.08);
+        border: 2px dashed $purple;
+        border-radius: 50%;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $purple;
+      }
+      h3 {
+        font-size: 1.3rem;
+      }
+      p {
+        color: $white;
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.partners {
+  .partners-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 24px;
+    .partner-logo-placeholder {
+      width: 100px;
+      height: 60px;
+      background: rgba(163,255,230,0.08);
+      border: 2px dashed $mint;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $mint;
+      font-size: 1rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+.connect {
+  .connect-list {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    .connect-card {
+      flex: 1 1 250px;
+      background: rgba(24,24,24,0.85);
+      border: 2px solid $purple;
+      border-radius: 24px;
+      padding: 24px 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+      }
+      .connect-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        a {
+          color: $mint;
+          text-decoration: none;
+          font-size: 1rem;
+          transition: color 0.2s;
+          &:hover {
+            color: $purple;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contact-form-section {
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+    input, textarea {
+      background: rgba(24,24,24,0.7);
+      border: 2px solid $mint;
+      border-radius: 12px;
+      color: $white;
+      padding: 12px;
+      font-size: 1rem;
+      resize: none;
+      outline: none;
+      transition: border 0.2s;
+      &:focus {
+        border: 2px solid $purple;
+      }
+    }
+    button {
+      background: $gradient;
+      color: $dark-bg;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      &:hover {
+        background: linear-gradient(90deg, #a3ffe6 0%, #a259d9 100%);
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .hero, .brands-list, .founders-list, .connect-list {
+    flex-direction: column;
+    gap: 24px;
+  }
+  section {
+    padding: 32px 0 24px 0;
+  }
+} 
