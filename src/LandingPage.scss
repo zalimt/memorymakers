@@ -1,4 +1,6 @@
-$dark-bg: #181818;
+@import './Vars.scss';
+
+$dark-bg: #000;
 $gradient: linear-gradient(90deg, #a259d9 0%, #a3ffe6 100%);
 $purple: #a259d9;
 $mint: #a3ffe6;
@@ -20,15 +22,8 @@ $gilroy-extrablack: 900;
 }
 
 section {
-  margin: 0 auto 48px auto;
-  padding: 48px 0 32px 0;
-  max-width: 1200px;
-  border-radius: 32px;
-  background: rgba(24, 24, 24, 0.95);
-  box-shadow: 0 4px 32px rgba(0,0,0,0.3);
-  position: relative;
-  font-family: 'Gilroy', 'Montserrat', 'Arial', sans-serif;
-  font-weight: $gilroy-regular;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 h1 {

@@ -1,0 +1,39 @@
+@import './Vars.scss';
+
+.contact-form-section {
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+    input, textarea {
+      background: rgba(24,24,24,0.7);
+      border: 2px solid $mint;
+      border-radius: 12px;
+      color: $white;
+      padding: 12px;
+      font-size: 1rem;
+      resize: none;
+      outline: none;
+      transition: border 0.2s;
+      &:focus {
+        border: 2px solid $purple;
+      }
+    }
+    button {
+      background: $gradient;
+      color: $dark-bg;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      &:hover {
+        background: linear-gradient(90deg, #a3ffe6 0%, #a259d9 100%);
+      }
+    }
+  }
+} 

@@ -1,4 +1,5 @@
 import React from 'react';
+import './FoundersSection.scss';
 
 const FoundersSection = () => (
   <section className="founders">

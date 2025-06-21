@@ -1,4 +1,5 @@
 import React from 'react';
+import './ContactFormSection.scss';
 
 const ContactFormSection = () => (
   <section className="contact-form-section">

@@ -15,12 +15,8 @@ $mm-shadow: 0 8px 32px 0 rgba(79, 0, 80, 0.18);
 }
 
 body, .mm-app {
-  background: linear-gradient(120deg, $mm-purple-light 0%, $mm-green-light 100%);
-  color: $mm-white;
   font-family: 'Gilroy', sans-serif;
   min-height: 100vh;
-  letter-spacing: 0.01em;
-  overflow-x: hidden;
 }
 
 .gradient-text {
@@ -30,51 +26,6 @@ body, .mm-app {
   background-clip: text;
   text-fill-color: transparent;
   filter: drop-shadow(0 2px 8px rgba(127,0,139,0.15));
-}
-
-.mm-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 6vw 1.2rem 6vw;
-  background: rgba(51, 51, 51, 0.7);
-  border-bottom: 2px solid $mm-purple-light;
-  font-family: 'Gilroy', sans-serif;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 2px 24px 0 rgba(61, 95, 81, 0.08);
-  border-radius: 0 0 2rem 2rem;
-  .mm-header-logo {
-    font-size: 2.4rem;
-    font-weight: 900;
-    letter-spacing: 2.5px;
-    color: $mm-white;
-    text-shadow: 0 2px 16px $mm-purple-light;
-    padding: 0.2em 0.6em;
-    border-radius: 1rem;
-    background: linear-gradient(90deg, rgba(127,0,139,0.12) 0%, rgba(167,229,203,0.10) 100%);
-    border: 1.5px solid $mm-glass-border;
-    box-shadow: $mm-shadow;
-  }
-  .mm-header-nav {
-    display: flex;
-    gap: 2.5rem;
-    .mm-header-link {
-      color: $mm-white;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 1.15rem;
-      letter-spacing: 0.04em;
-      padding: 0.4em 1.1em;
-      border-radius: 2em;
-      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-      background: transparent;
-      &:hover {
-        background: linear-gradient(90deg, $mm-purple-light 0%, $mm-green-light 100%);
-        color: $mm-bg;
-        box-shadow: 0 2px 12px 0 rgba(127,0,139,0.12);
-      }
-    }
-  }
 }
 
 .mm-main {

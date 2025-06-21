@@ -1,0 +1,41 @@
+// Color palette
+$mm-purple: #491F43;
+$mm-green: #3D5F51;
+$mm-purple-light: #7F008B;
+$mm-green-light: #A7E5CB;
+$mm-bg: #333;
+$mm-white: #fff;
+$mm-glass: rgba(51, 51, 51, 0.55);
+$mm-glass-border: rgba(127, 0, 139, 0.25);
+$mm-shadow: 0 8px 32px 0 rgba(79, 0, 80, 0.18);
+
+// Gilroy font weights
+$gilroy-light: 300;
+$gilroy-regular: 400;
+$gilroy-bold: 700;
+$gilroy-extrablack: 900;
+
+// Section and heading styles
+section {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Gilroy', 'Montserrat', 'Arial', sans-serif;
+  font-weight: $gilroy-extrablack;
+}
+h2, h3 {
+  font-family: 'Gilroy', 'Montserrat', 'Arial', sans-serif;
+  font-weight: $gilroy-bold;
+}
+
+b, strong {
+  font-family: 'Gilroy', 'Montserrat', 'Arial', sans-serif;
+  font-weight: $gilroy-bold;
+}
+
+.gilroy-light {
+  font-family: 'Gilroy', 'Montserrat', 'Arial', sans-serif;
+  font-weight: $gilroy-light;
+} 

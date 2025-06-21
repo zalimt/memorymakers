@@ -1,5 +1,50 @@
-@import '../App.scss';
+@import '../Vars.scss';
 
 .mm-header {
-  // Styles are already in App.scss for global header
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+  padding: 20px 0;
+}
+
+.mm-header-logo {
+  max-width: 240px;
+  padding: 32px 0;
+
+  .mm-logo-img {
+    width: 100%;
+  }
+}
+
+.mm-header-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.mm-header-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: $gilroy-bold;
+  font-size: 16px;
+  line-height: 100%;
+  padding: 8px 12px 4px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: $mm-purple-light;
+  }
+}
+
+.mm-header-link-accent {
+  background-color: #1bb3a7;
+  color: #151515;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+
+  
+  &:hover {
+    color: #fff;
+    background-color: $mm-purple-light;
+  }
 } 
