@@ -6,8 +6,8 @@ const ConnectSection = () => {
     {
       title: 'PERSONAL TRAVEL ASSIST',
       links: [
-        { type: 'linkedin', text: 'LinkedIn', url: '#' },
-        { type: 'instagram', text: 'Instagram', url: '#' },
+        { type: 'linkedin', text: 'LinkedIn', url: 'https://www.linkedin.com/company/personal-travel-assist/about/' },
+        { type: 'instagram', text: 'Instagram', url: 'https://www.instagram.com/personaltravelassist' },
         { type: 'email', text: 'info@p-travelassist.com', url: 'mailto:info@p-travelassist.com' },
         { type: 'phone', text: '+357 95 149872', url: 'tel:+35795149872' }
       ]
@@ -15,8 +15,8 @@ const ConnectSection = () => {
     {
       title: 'MEMORY MAKERS',
       links: [
-        { type: 'linkedin', text: 'LinkedIn', url: '#' },
-        { type: 'instagram', text: 'Instagram', url: '#' },
+        { type: 'linkedin', text: 'LinkedIn', url: 'https://www.linkedin.com/company/memory-makers-group/' },
+        { type: 'instagram', text: 'Instagram', url: 'https://www.instagram.com/memory.makers.cy' },
         { type: 'email', text: 'info@memorymakers.events', url: 'mailto:info@memorymakers.events' },
         { type: 'phone', text: '+357 95 149872', url: 'tel:+35795149872' }
       ]
@@ -24,8 +24,8 @@ const ConnectSection = () => {
     {
       title: 'HR SUMMIT CY',
       links: [
-        { type: 'linkedin', text: 'LinkedIn', url: '#' },
-        { type: 'instagram', text: 'Instagram', url: '#' },
+        { type: 'linkedin', text: 'LinkedIn', url: 'https://www.linkedin.com/company/cyprus-hr-community/' },
+        { type: 'instagram', text: 'Instagram', url: 'https://www.instagram.com/hrsummit.cy' },
         { type: 'email', text: 'info@hrsummitcy.com', url: 'mailto:info@hrsummitcy.com' },
         { type: 'phone', text: '+357 95 149872', url: 'tel:+35795149872' }
       ]
