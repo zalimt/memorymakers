@@ -5,6 +5,13 @@
     text-align: center;
     margin-bottom: 20px;
   }
+  .paragraph-title {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
   .section-description {
     text-align: center;
     max-width: 920px;
@@ -48,25 +55,57 @@
 
     .brand-card {
       flex: 1 1 250px;
-      background: rgba(24,24,24,0.85);
       border: 2px solid $mm-purple;
       border-radius: 24px;
       padding: 70px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: relative;
+      overflow: hidden;
+
+      .brand-section {
+        z-index: 1;
+      }
+
+      &.pta-card {
+        background: url('./assets/pta-bg.webp') no-repeat center center;
+        background-size: cover;
+      }
+      &.mm-card {
+        background: url('./assets/mm-bg.webp') no-repeat center center;
+        background-size: cover;
+      }
+      &.hrscy-card {
+        background: url('./assets/hrscy-bg.webp') no-repeat center center;
+        background-size: cover;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #151515;
+        opacity: 0.85;
+      }
 
       .brand-logo {
         width: 100%;
         max-width: 240px;
         display: flex;
         justify-content: center;
+        position: relative;
+        z-index: 1;
       }
       .card-brand-title {
         font-size: 30px;
         font-weight: $gilroy-bold;
-        margin: 32px 0 48px;
+        margin-top: 32px;
         text-align: center;
+        position: relative;
+        z-index: 1;
       }
       .card-title {
         font-weight: 700;
@@ -78,11 +117,14 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin: 32px auto 32px;
+        z-index: 1;
+        margin-top: 60px;
+        color: #fff;
 
         &::after {
           content: '';
           display: block;
-          width: calc(100% + 14px);
+          width: calc(100% + 18px);
           height: calc(100% + 6px);
           border: 2px solid $mm-purple-light;
           position: absolute;
@@ -92,7 +134,7 @@
         &::before {
           content: '';  
           display: block;
-          width: calc(100% + 14px);
+          width: calc(100% + 18px);
           height: calc(100% + 6px);
           border: 2px solid $mm-green-light;
           position: absolute;
@@ -105,7 +147,62 @@
         text-align: center;
         font-size: 18px;
         margin-bottom: 30px;
-        max-width: 900px;
+        max-width: 930px;
+        position: relative;
+        z-index: 1;
+      }
+      .card-bullets {
+        display: flex;
+        gap: 40px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+
+        .bullet-number {
+          font-size: 38px;
+          font-weight: 700;
+          position: relative;
+          height: fit-content;
+          width: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &::after {
+            content: '';
+            display: block;
+            width: calc(100% + 18px);
+            height: calc(100% + 6px);
+            border: 2px solid $mm-purple-light;
+            position: absolute;
+            top: -3px;
+            left: -7px;
+          }
+          &::before {
+            content: '';  
+            display: block;
+            width: calc(100% + 18px);
+            height: calc(100% + 6px);
+            border: 2px solid $mm-green-light;
+            position: absolute;
+            top: -8px;
+            left: -12px;
+          }
+        }
+        .bullet-content {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: -10px;
+
+          .bullet-content-title {
+            font-size: 22px;
+            font-weight: 700;
+          }
+          p {
+            font-size: 18px;
+            text-align: left;
+          }
+        }
       }
     }
   }
