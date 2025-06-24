@@ -47,6 +47,7 @@
       align-items: center;
       position: relative;
       overflow: hidden;
+      min-height: fit-content;
 
       @media (max-width: 768px) {
         padding: 32px 24px;
@@ -70,8 +71,8 @@
         z-index: 1;
 
         @media (max-width: 768px) {
-          width: 220px;
-          height: 220px;
+          width: 160px;
+          height: 160px;
         }
         
         &-container {
@@ -103,7 +104,7 @@
         max-width: fit-content;
 
         @media (max-width: 768px) {
-          font-size: 28px;
+          font-size: 20px;
           margin: 24px 0;
         }
 
