@@ -30,7 +30,7 @@
     z-index: 1;
 
     @media (max-width: 576px) {
-      min-width: 100%;
+      min-width: 340px;
       max-width: 100%;
       padding: 20px;
     }
@@ -45,6 +45,10 @@
       top: -3px;
       left: -7px;
       z-index: -1;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
 
       @media (max-width: 576px) {
         width: calc(100% + 30px);
@@ -62,6 +66,10 @@
       top: -8px;
       left: -12px;
       z-index: -1;
+
+      @media (max-width: 768px) {
+            display: none;
+          }
 
       @media (max-width: 576px) {
         width: calc(100% + 24px);
