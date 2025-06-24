@@ -35,7 +35,7 @@ const BrandsSection = () => {
             <div className="brand-logo">
               <img src={ptaLogo} alt="Personal Travel Assist Logo" />
             </div>
-            <h3 className='card-brand-title'>Personal Travel Assist</h3>
+            {/* <h3 className='card-brand-title'>Personal Travel Assist</h3> */}
             <div className="brand-section">
               <div className="brand-section-title">
                 <div className="t-20 card-title">ABOUT THE BRAND</div>
@@ -60,7 +60,7 @@ const BrandsSection = () => {
             <div className="brand-logo">
               <img src={memoryLogo} alt="Memory Makers Logo" />
             </div>
-            <h3 className='card-brand-title'>Memory Makers</h3>
+            {/* <h3 className='card-brand-title'>Memory Makers</h3> */}
             <div className="brand-section">
               <div className="brand-section-title">
                 <div className="t-20 card-title">ABOUT THE BRAND</div>
@@ -94,7 +94,7 @@ const BrandsSection = () => {
             <div className="brand-logo">
               <img src={hrscyLogo} alt="HR Summit CY Logo" />
             </div>
-            <h3 className='card-brand-title'>HR Summit CY</h3>
+            {/* <h3 className='card-brand-title'>HR Summit CY</h3> */}
             <div className="brand-section">
               <div className="brand-section-title">
                 <div className="t-20 card-title">ABOUT THE BRAND</div>
