@@ -49,7 +49,7 @@ const PartnersSection = () => {
   const doubledLogos = [...partnerLogos, ...partnerLogos];
 
   return (
-    <section className="partners pv">
+    <section id="partners" className="partners pv">
       <h2 className="section-title">Partners and Clients</h2>
       <p className="section-description">
         We are proud to work with leading companies and organizations across various industries, 

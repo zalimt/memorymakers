@@ -1,5 +1,74 @@
 @import '../App.scss';
+@import '../Vars.scss';
 
 .mm-footer {
-  // Styles are already in App.scss for global footer
+  background-color: #151515;
+  padding: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mm-footer-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  span {
+    color: #fff;
+    font-size: 16px;
+    opacity: 0.8;
+  }
+}
+
+.mm-footer-nav {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.mm-footer-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 4px 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, $mm-purple-light 0%, $mm-green-light 100%);
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    color: $mm-green-light;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mm-footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .mm-footer-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
 } 

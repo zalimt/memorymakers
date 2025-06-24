@@ -4,6 +4,15 @@
   background: #000000e8;
   position: fixed;
   width: 100%;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+
+.header-section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .mm-header {
@@ -33,22 +42,42 @@
   font-size: 16px;
   line-height: 100%;
   padding: 8px 12px 4px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease;
+  position: relative;
 
-  &:hover {
-    color: $mm-purple-light;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, $mm-purple-light 0%, $mm-green-light 100%);
+    transition: width 0.3s ease;
   }
-}
 
-.mm-header-link-accent {
-  background-color: #1bb3a7;
-  color: #151515;
-  border-radius: 4px;
-  transition: all 0.2s ease-in-out;
-
-  
   &:hover {
-    color: #fff;
-    background-color: $mm-purple-light;
+    color: $mm-green-light;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &.mm-header-link-accent {
+    background-color: #1bb3a7;
+    color: #151515;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    padding: 8px 12px;
+
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: $mm-purple-light;
+    }
   }
 } 

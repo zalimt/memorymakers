@@ -5,7 +5,7 @@ import dtishenko from './assets/dtishenko.webp';
 
 const FoundersSection = () => (
   <article className="founders-section pv">
-    <section className="founders">
+    <section id="founders" className="founders">
       <h2 className="section-title">Meet the Founders</h2>
       <p className="section-description">
         Our founders bring together decades of experience in travel, events, and business networking to create exceptional experiences and meaningful connections.

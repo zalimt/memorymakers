@@ -14,7 +14,7 @@ const BrandsSection = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="brands pv">
+    <section id="brands" className="brands pv">
       <h2 className="t-38 up section-title">Our Brands</h2>
       <p className="t-18 section-description">From VIP journeys to unforgettable events and powerful business forums, our brands redefine excellence. Personal Travel Assist crafts tailor-made executive travel experiences with a touch of luxury. Memory Makers Events turns high-level corporate visions into bold, immersive realities. HR Summit Cy unites top HR minds through exclusive summits that spark innovation and leadership.</p>
       <div className="brands-tabs">

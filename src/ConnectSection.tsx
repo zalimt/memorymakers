@@ -65,7 +65,7 @@ const ConnectSection = () => {
 
   return (
     <article className="connect-section pv">
-      <section className="connect">
+      <section id="connect" className="connect">
         <h2 className="section-title">Let's Connect</h2>
         <p className="section-description">
           Reach out to us through any of our brands' channels. We're always happy to hear from you.
