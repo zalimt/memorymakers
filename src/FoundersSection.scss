@@ -47,7 +47,7 @@
       align-items: center;
       position: relative;
       overflow: hidden;
-      min-height: fit-content;
+      min-height: fit-content !important;
 
       @media (max-width: 768px) {
         padding: 32px 24px;

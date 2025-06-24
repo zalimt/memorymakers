@@ -86,7 +86,7 @@
       min-height: 100%;
       height: auto;
       overflow: hidden;
-      min-height: fit-content;
+      min-height: fit-content !important;
 
       @media (max-width: 1024px) {
         padding: 50px 40px;

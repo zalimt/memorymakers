@@ -34,10 +34,31 @@
     overflow: hidden;
     padding: 40px 0;
 
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 200px;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, #000 0%, transparent 100%);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, #000 0%, transparent 100%);
+    }
+
     .partners-track {
       display: flex;
       width: max-content;
-      animation: scroll 45s linear infinite;
+      animation: scroll 60s linear infinite;
       position: relative;
       z-index: 1;
       gap: 40px;
@@ -90,9 +111,9 @@
 
 @keyframes scroll {
   0% {
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
   100% {
-    transform: translateX(calc(-50% - 20px));
+    transform: translateX(0);
   }
 } 
