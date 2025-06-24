@@ -66,12 +66,12 @@ b, strong {
     width: 300px;
     height: 300px;
     background: rgba(162, 89, 217, 0.1);
-    border: 2px dashed $mint;
+    border: 2px dashed $mm-green-light;
     border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $mint;
+    color: $mm-green-light;
     font-size: 1.2rem;
     flex-shrink: 0;
   }
@@ -95,13 +95,13 @@ b, strong {
         width: 80px;
         height: 80px;
         background: rgba(163,255,230,0.08);
-        border: 2px dashed $mint;
+        border: 2px dashed $mm-green-light;
         border-radius: 50%;
         margin-bottom: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: $mint;
+        color: $mm-green-light;
       }
       h3 {
         font-size: 1.4rem;
@@ -123,7 +123,7 @@ b, strong {
     .founder-card {
       flex: 1 1 350px;
       background: rgba(24,24,24,0.85);
-      border: 2px solid $mint;
+      border: 2px solid $mm-green-light;
       border-radius: 24px;
       padding: 32px 24px;
       display: flex;
@@ -162,12 +162,12 @@ b, strong {
       width: 100px;
       height: 60px;
       background: rgba(163,255,230,0.08);
-      border: 2px dashed $mint;
+      border: 2px dashed $mm-green-light;
       border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: $mint;
+      color: $mm-green-light;
       font-size: 1rem;
       margin: 0 auto;
     }
@@ -197,7 +197,7 @@ b, strong {
         flex-direction: column;
         gap: 8px;
         a {
-          color: $mint;
+          color: $mm-green-light;
           text-decoration: none;
           font-size: 1rem;
           transition: color 0.2s;
@@ -219,7 +219,7 @@ b, strong {
     margin: 0 auto;
     input, textarea {
       background: rgba(24,24,24,0.7);
-      border: 2px solid $mint;
+      border: 2px solid $mm-green-light;
       border-radius: 12px;
       color: $white;
       padding: 12px;
