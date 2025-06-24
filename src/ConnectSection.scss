@@ -4,12 +4,24 @@
   background-color: #151515;
 }
 .connect {
+  padding: 120px 40px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    padding: 80px 20px;
+  }
+
   .section-title {
     text-align: center;
     margin-bottom: 20px;
     font-size: 38px;
     font-weight: $gilroy-bold;
     color: #fff;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
   }
 
   .section-description {
@@ -18,6 +30,13 @@
     margin: 0 auto 60px;
     font-size: 18px;
     color: #fff;
+    line-height: 1.6;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      margin: 0 auto 40px;
+      line-height: 1.5;
+    }
   }
 
   .connect-list {
@@ -107,6 +126,108 @@
             border-bottom-color: $mm-green-light;
           }
         }
+
+        @media (max-width: 768px) {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  .connect-form {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @media (max-width: 768px) {
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      gap: 24px;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .form-field {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        label {
+          font-size: 16px;
+          color: #fff;
+          font-weight: 500;
+
+          @media (max-width: 768px) {
+            font-size: 15px;
+          }
+        }
+
+        input, textarea {
+          background: rgba(255, 255, 255, 0.1);
+          border: 2px solid $mm-purple;
+          border-radius: 12px;
+          padding: 16px;
+          color: #fff;
+          font-size: 16px;
+          font-family: 'Gilroy', sans-serif;
+          transition: all 0.3s ease;
+
+          @media (max-width: 768px) {
+            padding: 14px;
+            font-size: 15px;
+          }
+
+          &:focus {
+            outline: none;
+            border-color: $mm-green-light;
+          }
+
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+          }
+        }
+
+        textarea {
+          min-height: 120px;
+          resize: vertical;
+
+          @media (max-width: 768px) {
+            min-height: 100px;
+          }
+        }
+      }
+    }
+
+    .submit-button {
+      background: $mm-purple-light;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 16px 32px;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      align-self: center;
+      margin-top: 16px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        padding: 14px 24px;
+        font-size: 16px;
+      }
+
+      &:hover {
+        background: $mm-green-light;
+        transform: translateY(-4px);
       }
     }
   }
