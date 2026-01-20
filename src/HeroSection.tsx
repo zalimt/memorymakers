@@ -5,7 +5,7 @@ const HeroSection = () => (
   <article className="hero-section">
     <section id="hero" className="hero">
       <div className="hero-content">
-        <h1>Memory Makers Group</h1>
+        <h1>Memory Makers Group Events</h1>
         <p>Cyprus-based group of companies delivering <b>premium B2B services</b> in travel, <b>corporate events</b>, and <b>professional networking</b>.</p>
       </div>
     </section>

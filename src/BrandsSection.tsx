@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import './BrandsSection.scss';
 import ptaLogo from './assets/pta-logo.svg';
 import memoryLogo from './assets/memory-logo.svg';
-import hrscyLogo from './assets/hrscy-logo.svg';
+import mmgLogo from './assets/MMG-logo.svg';
 
 const tabNames = [
   'Personal Travel Assist',
   'Memory Makers',
-  'HR Summit CY',
+  'MMG Summit',
 ];
 
 const BrandsSection = () => {
@@ -92,7 +92,7 @@ const BrandsSection = () => {
         {activeTab === 2 && (
           <div className="brand-card hrscy-card">
             <div className="brand-logo">
-              <img src={hrscyLogo} alt="HR Summit CY Logo" />
+              <img src={mmgLogo} alt="HR Summit CY Logo" />
             </div>
             {/* <h3 className='card-brand-title'>HR Summit CY</h3> */}
             <div className="brand-section">
