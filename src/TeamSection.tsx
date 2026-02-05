@@ -11,23 +11,6 @@ const TeamSection = () => (
       <div className="team-grid">
         <div className="team-card">
           <div className="team-image">
-            <img src={mariannaKonina} alt="Marianna Konina" />
-          </div>
-          <h3 className="team-name">Marianna Konina</h3>
-          <div className="team-title">Strategic Communication Advisor</div>
-          <p className="team-bio">
-            Founder of{' '}
-            <a href="https://reputation.city/" target="_blank" rel="noopener noreferrer">
-              Reputation City
-            </a>{' '}
-            - a reputation management company. Marianna has over 20 years of professional experience
-            in strategic communications, reputation management, and industry-level positioning across
-            international markets. Her company creates clients&apos; Digital Profiles with a
-            compliance-first mindset across search engines and AI platforms.
-          </p>
-        </div>
-        <div className="team-card">
-          <div className="team-image">
             <img src={polinaDemidova} alt="Polina Demidova" />
           </div>
           <h3 className="team-name">Polina Demidova</h3>
@@ -53,6 +36,23 @@ const TeamSection = () => (
             supports organisations in creating environments where people can thrive. Her work is rooted
             in a human-centred approach that fuels resilience, engagement, and long-term business
             sustainability.
+          </p>
+        </div>
+        <div className="team-card">
+          <div className="team-image">
+            <img src={mariannaKonina} alt="Marianna Konina" />
+          </div>
+          <h3 className="team-name">Marianna Konina</h3>
+          <div className="team-title">Strategic Communication Advisor</div>
+          <p className="team-bio">
+            Founder of{' '}
+            <a href="https://reputation.city/" target="_blank" rel="noopener noreferrer">
+              Reputation City
+            </a>{' '}
+            - a reputation management company. Marianna has over 20 years of professional experience
+            in strategic communications, reputation management, and industry-level positioning across
+            international markets. Her company creates clients&apos; Digital Profiles with a
+            compliance-first mindset across search engines and AI platforms.
           </p>
         </div>
       </div>

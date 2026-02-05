@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" type="image/png" href="%PUBLIC_URL%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#151515" />
     <meta name="description" content="Memory Makers Group - Creating unforgettable brand experiences and events in Cyprus" />
@@ -18,6 +18,29 @@
     <link rel="preload" href="%PUBLIC_URL%/fonts/Gilroy-Bold.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="%PUBLIC_URL%/fonts/Gilroy-Medium.ttf" as="font" type="font/ttf" crossorigin />
     <title>Memory Makers Group | Brand Experiences & Events in Cyprus</title>
+    <script>
+      // Suppress ResizeObserver loop errors (harmless browser quirk)
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        const resizeObserverLoopErrRe = /^[^(]*ResizeObserver loop/;
+        const originalError = window.onerror;
+        window.onerror = function(message, source, lineno, colno, error) {
+          if (typeof message === 'string' && resizeObserverLoopErrRe.test(message)) {
+            return true;
+          }
+          if (originalError) {
+            return originalError.call(this, message, source, lineno, colno, error);
+          }
+          return false;
+        };
+        window.addEventListener('error', function(e) {
+          if (e.message && resizeObserverLoopErrRe.test(e.message)) {
+            e.stopImmediatePropagation();
+            e.preventDefault();
+            return false;
+          }
+        }, true);
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

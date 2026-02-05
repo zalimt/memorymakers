@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './ContactFormSection.scss';
 
 const ContactFormSection = () => {
@@ -10,6 +11,8 @@ const ContactFormSection = () => {
     service: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<null | { type: 'success' | 'error'; message: string }>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -19,10 +22,122 @@ const ContactFormSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    if (isSubmitting) {
+      return;
+    }
+
+    const serviceId = (process.env.REACT_APP_EMAILJS_SERVICE_ID ?? '').trim();
+    const adminTemplateId = (process.env.REACT_APP_EMAILJS_TEMPLATE_ADMIN ?? '').trim();
+    const confirmTemplateId = (process.env.REACT_APP_EMAILJS_TEMPLATE_CONFIRM ?? '').trim();
+    const publicKey = (process.env.REACT_APP_EMAILJS_PUBLIC_KEY ?? '').trim();
+
+    // Debug logging (only in development)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('=== EmailJS Configuration ===');
+      console.log('Service ID:', serviceId || 'MISSING');
+      console.log('Admin Template ID:', adminTemplateId || 'MISSING');
+      console.log('Confirm Template ID:', confirmTemplateId || 'MISSING');
+      console.log('Public Key:', publicKey ? `${publicKey.substring(0, 5)}...${publicKey.substring(publicKey.length - 3)}` : 'MISSING');
+      console.log('Public Key Length:', publicKey.length);
+      console.log('============================');
+    }
+
+    if (!serviceId || !adminTemplateId || !confirmTemplateId || !publicKey) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Email service is not configured. Please contact us at info@memorymakers.events.'
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // Format service name for display
+      const serviceNames: Record<string, string> = {
+        'personal-travel': 'Personal Travel Assist',
+        'memory-makers': 'Memory Makers Events',
+        'hr-summit': 'HR Summit CY'
+      };
+      const serviceDisplay = serviceNames[formData.service] || formData.service;
+
+      // Format current date/time
+      const now = new Date();
+      const timeString = now.toLocaleString('en-US', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        timeZoneName: 'short'
+      });
+
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || 'Not provided',
+        company: formData.company || 'Not provided',
+        service: serviceDisplay,
+        message: formData.message,
+        time: timeString,
+        reply_to: formData.email
+      };
+
+      // Send admin email
+      console.log('Sending admin email with:', {
+        serviceId,
+        templateId: adminTemplateId,
+        publicKeyLength: publicKey.length
+      });
+      const adminResponse = await emailjs.send(serviceId, adminTemplateId, templateParams, {
+        publicKey: publicKey
+      });
+      console.log('Admin email sent successfully:', adminResponse.status, adminResponse.text);
+
+      // Send confirmation email
+      console.log('Sending confirmation email with:', {
+        serviceId,
+        templateId: confirmTemplateId,
+        publicKeyLength: publicKey.length
+      });
+      const confirmResponse = await emailjs.send(serviceId, confirmTemplateId, templateParams, {
+        publicKey: publicKey
+      });
+      console.log('Confirmation email sent successfully:', confirmResponse.status, confirmResponse.text);
+
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        company: '',
+        service: '',
+        message: ''
+      });
+      setSubmitStatus({
+        type: 'success',
+        message: 'Thanks! Your message has been sent. Please check your email for confirmation.'
+      });
+    } catch (error: any) {
+      console.error('EmailJS error:', error);
+      let errorMessage = 'Something went wrong. Please try again or email us directly at info@memorymakers.events.';
+      
+      if (error?.text) {
+        errorMessage = `Error: ${error.text}. Please check your email configuration or contact us at info@memorymakers.events.`;
+      } else if (error?.message) {
+        errorMessage = `Error: ${error.message}. Please try again or contact us at info@memorymakers.events.`;
+      }
+      
+      setSubmitStatus({
+        type: 'error',
+        message: errorMessage
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -106,9 +221,18 @@ const ContactFormSection = () => {
                 required
               />
             </div>
-            <button type="submit">
-              <span>Send Message</span>
+            <button type="submit" disabled={isSubmitting}>
+              <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
             </button>
+            {submitStatus && (
+              <p
+                role="status"
+                aria-live="polite"
+                className={`form-status ${submitStatus.type}`}
+              >
+                {submitStatus.message}
+              </p>
+            )}
           </form>
         </div>
       </section>

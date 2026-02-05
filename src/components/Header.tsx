@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Header.scss';
-import mmLogo from '../assets/mm-logo.svg';
+import mmgPartnersLogo from '../mmg-partners-logo.svg';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <a href="/" className="logo">
-          <img src={mmLogo} alt="Memory Makers Logo" />
+          <img src={mmgPartnersLogo} alt="Memory Makers Group Partners Logo" />
         </a>
 
         <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
