@@ -13,12 +13,15 @@ $gilroy-bold: 700;
 $gilroy-extrablack: 900;
 
 .landing-page {
-  background: $dark-bg;
+  background: radial-gradient(1200px 600px at 15% -10%, rgba($mm-purple-light, 0.16), transparent 60%),
+    radial-gradient(1200px 600px at 85% 10%, rgba($mm-green-light, 0.12), transparent 55%),
+    #151515;
   color: $white;
   font-family: 'Gilroy', 'Montserrat', 'Arial', sans-serif;
   font-weight: $gilroy-regular;
   min-height: 100vh;
   padding: 0;
+  line-height: 1.6;
 }
 
 section {
@@ -29,10 +32,12 @@ section {
 h1 {
   font-family: 'Gilroy', 'Montserrat', 'Arial', sans-serif;
   font-weight: $gilroy-extrablack;
+  letter-spacing: 0.01em;
 }
 h2, h3 {
   font-family: 'Gilroy', 'Montserrat', 'Arial', sans-serif;
   font-weight: $gilroy-bold;
+  letter-spacing: 0.01em;
 }
 
 b, strong {

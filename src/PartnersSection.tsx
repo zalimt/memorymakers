@@ -1,47 +1,46 @@
 import React from 'react';
 import './PartnersSection.scss';
 
-// Import all partner logos
-import partnerLogo1 from './assets/partner-logo1.png';
-import partnerLogo2 from './assets/partner-logo2.png';
-import partnerLogo3 from './assets/partner-logo3.png';
-import partnerLogo4 from './assets/partner-logo4.png';
-import partnerLogo5 from './assets/partner-logo5.png';
-import partnerLogo6 from './assets/partner-logo6.png';
-import partnerLogo7 from './assets/partner-logo7.png';
-import partnerLogo8 from './assets/partner-logo8.png';
-import partnerLogo9 from './assets/partner-logo9.png';
-import partnerLogo10 from './assets/partner-logo10.png';
-import partnerLogo11 from './assets/partner-logo11.png';
-import partnerLogo12 from './assets/partner-logo12.png';
-import partnerLogo13 from './assets/partner-logo13.png';
-import partnerLogo14 from './assets/partner-logo14.png';
-import partnerLogo15 from './assets/partner-logo15.png';
-import partnerLogo16 from './assets/partner-logo16.png';
-import partnerLogo17 from './assets/partner-logo17.png';
-import partnerLogo18 from './assets/partner-logo18.png';
-import partnerLogo19 from './assets/partner-logo19.png';
+import reputationCity from './assets/partners/reputation-city.svg';
+import mellow from './assets/partners/mellow.svg';
+import municorn from './assets/partners/municorn.svg';
+import evrika from './assets/partners/evrika.svg';
+import hercules from './assets/partners/hercules.svg';
+import yummyKitchen from './assets/partners/yummy-kitchen.svg';
+import warehouse from './assets/partners/warehouse.svg';
+import cyhr from './assets/partners/cyhr.svg';
+import techisland from './assets/partners/techisland.png';
+import alberBlank from './assets/partners/alber-blank.svg';
+import ipg from './assets/partners/ipg.svg';
+import womenInTech from './assets/partners/womenintech.svg';
+import eptaPro from './assets/partners/epta-pro.svg';
+import digitalTree from './assets/partners/digital-tree.svg';
+import paysonix from './assets/partners/paysonix.svg';
+import fastForward from './assets/partners/fastforward.svg';
+import sense from './assets/partners/sense.svg';
+import cbg from './assets/partners/cbg.svg';
+import malina from './assets/partners/malina.svg';
 
 const partnerLogos = [
-  { src: partnerLogo1, alt: 'Partner 1' },
-  { src: partnerLogo2, alt: 'Partner 2' },
-  { src: partnerLogo3, alt: 'Partner 3' },
-  { src: partnerLogo4, alt: 'Partner 4' },
-  { src: partnerLogo5, alt: 'Partner 5' },
-  { src: partnerLogo6, alt: 'Partner 6' },
-  { src: partnerLogo7, alt: 'Partner 7' },
-  { src: partnerLogo8, alt: 'Partner 8' },
-  { src: partnerLogo9, alt: 'Partner 9' },
-  { src: partnerLogo10, alt: 'Partner 10' },
-  { src: partnerLogo11, alt: 'Partner 11' },
-  { src: partnerLogo12, alt: 'Partner 12' },
-  { src: partnerLogo13, alt: 'Partner 13' },
-  { src: partnerLogo14, alt: 'Partner 14' },
-  { src: partnerLogo15, alt: 'Partner 15' },
-  { src: partnerLogo16, alt: 'Partner 16' },
-  { src: partnerLogo17, alt: 'Partner 17' },
-  { src: partnerLogo18, alt: 'Partner 18' },
-  { src: partnerLogo19, alt: 'Partner 19' },
+  { href: 'https://reputation.city', src: reputationCity, alt: 'Reputation City' },
+  { href: 'https://mellow.io', src: mellow, alt: 'mellow' },
+  { href: 'https://municorn.com', src: municorn, alt: 'municorn' },
+  { href: 'https://evrikakids.com', src: evrika, alt: 'EVRIKA KIDS' },
+  { href: 'https://hercules-group.com', src: hercules, alt: 'HERCULES' },
+  { href: 'https://yummykitchencyprus.com/en/', src: yummyKitchen, alt: 'Yummy kitchen' },
+  { href: 'https://warehousecy.com', src: warehouse, alt: 'WAREHOUSE BY IT QUARTER' },
+  { href: 'https://www.cyhrma.org', src: cyhr, alt: 'CHR ASSOCIATION' },
+  { href: 'https://thetechisland.org', src: techisland, alt: 'techisland' },
+  { href: 'https://alberblanc.com', src: alberBlank, alt: 'Àlber Blanc' },
+  { href: 'https://ipg.global', src: ipg, alt: 'IPG' },
+  { href: 'https://women-in-tech.org/cy/', src: womenInTech, alt: 'WOMEN in tech Cyprus' },
+  { href: 'https://eptapro.com', src: eptaPro, alt: 'EPTA PRO' },
+  { href: 'https://digitaltree.com.cy', src: digitalTree, alt: 'DIGITAL TREE' },
+  { href: 'https://paysonix.com', src: paysonix, alt: 'PAY SONIX' },
+  { href: 'https://fastforward.com.cy', src: fastForward, alt: 'FAST FORWARD' },
+  { href: 'https://www.instagram.com/sense.productions/', src: sense, alt: 'sense' },
+  { href: 'https://cyprusbusinessgroup.com', src: cbg, alt: 'CBG' },
+  { href: 'https://www.instagram.com/malinabeauty.cy', src: malina, alt: 'MALINA HAIR & BEAUTY' },
 ];
 
 const PartnersSection = () => {
@@ -58,9 +57,15 @@ const PartnersSection = () => {
       <div className="partners-slider">
         <div className="partners-track">
           {doubledLogos.map((logo, index) => (
-            <div key={`logo-${index}`} className="partner-logo">
+            <a
+              key={`logo-${index}`}
+              className="partner-logo"
+              href={logo.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src={logo.src} alt={logo.alt} />
-            </div>
+            </a>
           ))}
         </div>
       </div>

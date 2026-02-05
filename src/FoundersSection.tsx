@@ -18,9 +18,13 @@ const FoundersSection = () => (
             </div>
           </div>
           <h3 className="founder-name">Nadezhda Gorislavtseva</h3>
-          <div className="founder-title">Founder | Expert in the Travel Industry | Travel Agent</div>
+          <div className="founder-title">
+            Strategic Partner for HR Leaders in Experiences, Travel & Community
+            <br />
+            Co-founder of Memory Makers Group
+          </div>
           <p className="founder-description">
-            Has been inspiring people worldwide to build their travel collections for <strong>almost 20 years</strong>. Ranked among the <strong>top 15 travel assistants</strong> by The Leading Hotels of the World Association. Assembled a powerhouse team of professionals specializing in the organization and delivery of travel services worldwide, achieving results with over <strong>6,000 satisfied clients</strong>, half of whom are repeat customers. They have been working with some families and companies for decades.
+            Brings 20+ years of expertise at the intersection of travel, events, and human-centric business experiences. Today Memory Makers Group is recognized by leading hotels as one of the top travel and event agencies in Europe and the CIS. Working with global companies of 5,000+ employees and offices in 20+ countries.
           </p>
         </div>
         <div className="founder-card">
@@ -30,9 +34,13 @@ const FoundersSection = () => (
             </div>
           </div>
           <h3 className="founder-name">Dmitriy Tishenko</h3>
-          <div className="founder-title">Founder | Expert in Corporate Travel & Events | Marketing Strategist</div>
+          <div className="founder-title">
+            Expert in Corporate Travel & Events Marketing Strategist
+            <br />
+            Co-founder of Memory Makers Group
+          </div>
           <p className="founder-description">
-            Co-founder and managing partner of <strong>Memory Makers Group</strong> – a Cyprus-based company providing premium B2B services in corporate travel, event planning, and professional networking. Oversees the development and delivery of projects with a focus on <strong>strategic thinking, creative planning, and client-oriented execution</strong>. The company is growing dynamically and open to collaboration with businesses across various industries, offering <strong>tailored solutions and a high standard of service</strong>.
+            Dmitriy has 15+ years in the global tourism and travel industry. Dmitriy has worked across diverse international markets, shaping large-scale corporate and business travel ecosystems. His vision is to create future-oriented experiences that support leadership and cross-cultural connection.
           </p>
         </div>
       </div>

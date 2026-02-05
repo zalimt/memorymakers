@@ -7,9 +7,10 @@
   width: 100%;
   z-index: 1000;
   padding: 24px 40px;
-  background: rgba(21, 21, 21, 0.9);
+  background: rgba(21, 21, 21, 0.92);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
   @media (max-width: 1200px) {
     padding: 16px 20px;
@@ -69,10 +70,12 @@
       color: #fff;
       text-decoration: none;
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 600;
       position: relative;
-      transition: color 0.3s ease;
+      transition: color 0.25s ease, opacity 0.25s ease;
       text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.9;
 
       @media (max-width: 1200px) {
         font-size: 24px;
@@ -92,6 +95,7 @@
 
       &:hover {
         color: $mm-green-light;
+        opacity: 1;
 
         &::after {
           width: 100%;
@@ -99,11 +103,13 @@
       }
 
       &.mm-header-link-accent {
-        background: $mm-purple-light;
+        background: linear-gradient(90deg, $mm-purple-light 0%, $mm-green-light 100%);
         padding: 8px 16px;
         border-radius: 8px;
         font-weight: 600;
         transition: all 0.3s ease;
+        color: #151515;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 
         &::after {
           display: none;
@@ -111,9 +117,9 @@
 
         &:hover {
           color: #151515;
-          opacity: 0.9;
+          opacity: 0.95;
           transform: translateY(-1px);
-          background: $mm-green-light;
+          background: linear-gradient(90deg, $mm-green-light 0%, $mm-purple-light 100%);
         }
 
         @media (max-width: 1200px) {
@@ -169,8 +175,8 @@
 
   &.scrolled {
     padding: 16px 40px;
-    background: rgba(21, 21, 21, 0.95);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    background: rgba(21, 21, 21, 0.97);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
 
     @media (max-width: 1200px) {
       padding: 12px 20px;
