@@ -27,7 +27,7 @@ const ContactFormSection = () => {
 
   return (
     <article className="contact-form-section pv">
-      <section className="contact-form">
+      <section id="contact" className="contact-form">
         <h2 className="section-title">Get in Touch</h2>
         <p className="section-description">
           Ready to create unforgettable memories? Fill out the form below and let's start planning your next event together.

@@ -22,7 +22,7 @@ const ConnectSection = () => {
       ]
     },
     {
-      title: 'HR SUMMIT CY',
+      title: 'MMG HR SUMMIT',
       links: [
         { type: 'linkedin', text: 'LinkedIn', url: 'https://www.linkedin.com/company/cyprus-hr-community/' },
         { type: 'instagram', text: 'Instagram', url: 'https://www.instagram.com/hrsummit.cy' },

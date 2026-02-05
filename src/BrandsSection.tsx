@@ -7,7 +7,7 @@ import mmgLogo from './assets/MMG-logo.svg';
 const tabNames = [
   'Personal Travel Assist',
   'Memory Makers',
-  'MMG Summit',
+  'MMG HR Summit',
 ];
 
 const BrandsSection = () => {
@@ -16,7 +16,26 @@ const BrandsSection = () => {
   return (
     <section id="brands" className="brands pv">
       <h2 className="t-38 up section-title">Our Brands</h2>
-      <p className="t-18 section-description">From VIP journeys to unforgettable events and powerful business forums, our brands redefine excellence. Personal Travel Assist crafts tailor-made executive travel experiences with a touch of luxury. Memory Makers Events turns high-level corporate visions into bold, immersive realities. HR Summit Cy unites top HR minds through exclusive summits that spark innovation and leadership.</p>
+      <div className="section-description t-18">
+        <p>
+          Each MMG brand plays an important role within a shared vision – creating meaningful experiences that connect people, knowledge, and business impact.
+        </p>
+        <p>
+          <strong>Personal Travel Assist</strong> supports leaders and teams with high-level business and executive travel, turning mobility into a well-organised experience rather than a logistical challenge.
+        </p>
+        <p>
+          <strong>Memory Makers Events</strong> designs and delivers corporate events as strategic tools. From leadership events to large-scale international gatherings – where every detail serves a clear purpose: involvement, engagement, and connection.
+        </p>
+        <p>
+          <strong>MMG HR Community</strong> is a leaders-driven platform that brings together HR leaders and experts to exchange knowledge, address shared challenges, and collectively shape the future of human capital across Cyprus and the Mediterranean region.
+        </p>
+        <p>
+          <strong>MMG HR Summit</strong> is an international conference for HR leaders focused on the real challenges of managing people, culture, and human capital in today’s organizations.
+        </p>
+        <p>
+          Together, our brands form an integrated ecosystem where travel, events, and professional communities work hand in hand to strengthen teams, spark ideas, and create lasting value.
+        </p>
+      </div>
       <div className="brands-tabs">
         {tabNames.map((name, idx) => (
           <button

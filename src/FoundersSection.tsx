@@ -18,7 +18,7 @@ const FoundersSection = () => (
             </div>
           </div>
           <h3 className="founder-name">Nadezhda Gorislavtseva</h3>
-          <div className="founder-title">Business Owner | Expert in the Travel Industry | Travel Agent</div>
+          <div className="founder-title">Founder | Expert in the Travel Industry | Travel Agent</div>
           <p className="founder-description">
             Has been inspiring people worldwide to build their travel collections for <strong>almost 20 years</strong>. Ranked among the <strong>top 15 travel assistants</strong> by The Leading Hotels of the World Association. Assembled a powerhouse team of professionals specializing in the organization and delivery of travel services worldwide, achieving results with over <strong>6,000 satisfied clients</strong>, half of whom are repeat customers. They have been working with some families and companies for decades.
           </p>
@@ -30,7 +30,7 @@ const FoundersSection = () => (
             </div>
           </div>
           <h3 className="founder-name">Dmitriy Tishenko</h3>
-          <div className="founder-title">Business Owner | Expert in Corporate Travel & Events | Marketing Strategist</div>
+          <div className="founder-title">Founder | Expert in Corporate Travel & Events | Marketing Strategist</div>
           <p className="founder-description">
             Co-founder and managing partner of <strong>Memory Makers Group</strong> – a Cyprus-based company providing premium B2B services in corporate travel, event planning, and professional networking. Oversees the development and delivery of projects with a focus on <strong>strategic thinking, creative planning, and client-oriented execution</strong>. The company is growing dynamically and open to collaboration with businesses across various industries, offering <strong>tailored solutions and a high standard of service</strong>.
           </p>

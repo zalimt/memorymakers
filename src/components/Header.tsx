@@ -38,7 +38,7 @@ const Header: React.FC = () => {
           <a href="#connect" onClick={closeMenu}>Connect</a>
           <a href="#contact" onClick={closeMenu}>Contact</a>
           <a href="https://p-travelassist.com" target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="mm-header-link-accent">PTA</a>
-          <a href="https://hrsummitcy.com" target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="mm-header-link-accent">HR SUMMIT CY</a>
+          <a href="https://hrsummit-mmg.com" target="_blank" rel="noopener noreferrer" onClick={closeMenu} className="mm-header-link-accent">MMG HR SUMMIT</a>
         </nav>
 
         <div 
